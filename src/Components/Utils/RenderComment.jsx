@@ -3,8 +3,11 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { useLoggedInUser } from '../../Context/UsersContext';
 
 const RenderComment = ({ author, commentData, timestamp, upvotes, unvotes, replies }) => {
+  const user = useLoggedInUser();
+  
   return (
     <div className='RenderCommentContainer'>
 
