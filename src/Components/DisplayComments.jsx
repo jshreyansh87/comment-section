@@ -1,25 +1,20 @@
 import React, { useContext } from 'react';
 import { useAllComments } from '../Context/CommentsContext';
+import RenderComment from './Utils/RenderComment';
 
 const DisplayComments = () => {
-    // const comments = useAllComments();
-    const comments = [
-        {
-            author: "Rob Hope",
-            commentData: "Hey I added a new Comment under my name",
-            timestamp: new Date("1 August 2022"),
-            upvotes: 0,
-            unvotes: 0,
-            replies: []
-        },
-    ];
+    const comments = useAllComments();
     console.log(comments);
 
     return (
-        <div>
-            diplay comments component
+        <div className='CommentSection'>
+            {
+                comments.map((comment, i) => (
+                    <RenderComment key={i} author={comment.author} commentData={comment.commentData} timestamp={comment.timestamp} upvotes={comment.upvotes} unvotes={comment.unvotes} replies={comment.replies} />
+                ))
+            }
         </div>
     )
 }
 
-export default DisplayComments
+export default DisplayComments;

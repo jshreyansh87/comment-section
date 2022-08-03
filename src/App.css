@@ -5,8 +5,8 @@
 }
 
 .PostCommentSection {
-  border: 1px solid black;
-  width: 90vw;
+  width: 100vw;
+  height: 10vh;
   margin: 0 auto;
   padding: 20px;
   display: flex;
@@ -18,6 +18,46 @@
   width: 70%;
 }
 
-#PostCommentButton {
-  background-color: rgb(182, 52, 237);
+.PostCommentButton {
+  background-color: rgb(182, 52, 237) !important;
+}
+
+.CommentSection {
+  width: 85vw;
+  height: fit-content;
+  color: black;
+  margin: 0 auto;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.RenderCommentContainer {
+  margin-bottom: 3%;
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+
+.CommentAuthorAvatar {
+  position: absolute;
+  top: -2px;
+  left: -25px;
+}
+
+.CommentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.CommentAuthorHeading::after {
+  content: ".";
+  margin: 0 10px;
+}
+
+.CommentButton {
+  text-transform: none !important;
+  color: #777 !important;
 }
